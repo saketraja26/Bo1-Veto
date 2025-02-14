@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVC Map Veto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="aarohan.png" class="logo left" alt="Logo">
+            <h1>Valorant Tournament Map Veto</h1>
+            <img src="dv.png" class="logo right" alt="Logo">
+        </div>
+        
+        <div class="toss-section">
+            <button id="tossButton">Toss</button>
+            <p id="tossResult"></p>
+        </div>
+        
+        <div class="teams">
+            <div class="team">
+                <label for="teamA">Team A:</label>
+                <select id="teamA" class="team-select">
+                    <option value="">Select Team</option>
+                    <option value="ramadan-warriors">Ramadan Warriors</option>
+                    <option value="mazhuda">Mazhuda</option>
+                    <option value="s1mps">S1MPS</option>
+                    <option value="team-ace">Team Ace</option>
+                    <option value="arse-nls">ARSE-NLS</option>
+                    <option value="v3nom">V3NOM毒</option>
+                    <option value="ignite-community">Ignite Community</option>
+                    <option value="champions">Champions</option>
+                    <option value="mystic-monarchs">Mystic Monarchs</option>
+                    <option value="team-killers">TEAM KILLERS</option>
+                    <option value="blizzard">Blizzard</option>
+                    <option value="pookiebear-esports">Pookiebear Esports</option>
+                    <option value="pune-rivals">Pune Rivals</option>
+                    <option value="no-fear">No Fear</option>
+                    <option value="butter-5">butter 5</option>
+                </select>
+                
+                <p id="teamAName"></p>
+            </div>
+            <div class="team">
+                <label for="teamB">Team B:</label>
+                <select id="teamB" class="team-select">
+                    <option value="">Select Team</option>
+                    <option value="ramadan-warriors">Ramadan Warriors</option>
+                    <option value="mazhuda">Mazhuda</option>
+                    <option value="s1mps">S1MPS</option>
+                    <option value="team-ace">Team Ace</option>
+                    <option value="arse-nls">ARSE-NLS</option>
+                    <option value="v3nom">V3NOM毒</option>
+                    <option value="ignite-community">Ignite Community</option>
+                    <option value="champions">Champions</option>
+                    <option value="mystic-monarchs">Mystic Monarchs</option>
+                    <option value="team-killers">TEAM KILLERS</option>
+                    <option value="blizzard">Blizzard</option>
+                    <option value="pookiebear-esports">Pookiebear Esports</option>
+                    <option value="pune-rivals">Pune Rivals</option>
+                    <option value="no-fear">No Fear</option>
+                    <option value="butter-5">butter 5</option>
+                </select>
+                
+                <p id="teamBName"></p>
+            </div>
+        </div>
+
+        <div class="map-veto">
+            <div class="column ban" data-team="">
+                <p class="column-title">BAN</p>
+                <select class="map-select">
+                    <option value="">Select Map</option>
+                    <option value="haven">Haven</option>
+                    <option value="pearl">Pearl</option>
+                    <option value="abyss">Abyss</option>
+                    <option value="fracture">Fracture</option>
+                    <option value="split">Split</option>
+                    <option value="lotus">Lotus</option>
+                    <option value="bind">Bind</option>
+                </select>
+                <div class="map-image"></div>
+            </div>
+            <div class="column ban" data-team="">
+                <p class="column-title">BAN</p>
+                <select class="map-select">
+                    <option value="">Select Map</option>
+                    <option value="haven">Haven</option>
+                    <option value="pearl">Pearl</option>
+                    <option value="abyss">Abyss</option>
+                    <option value="fracture">Fracture</option>
+                    <option value="split">Split</option>
+                    <option value="lotus">Lotus</option>
+                    <option value="bind">Bind</option>
+                </select>
+                <div class="map-image"></div>
+            </div>
+            <div class="column ban" data-team="">
+                <p class="column-title">BAN</p>
+                <select class="map-select">
+                    <option value="">Select Map</option>
+                    <option value="haven">Haven</option>
+                    <option value="pearl">Pearl</option>
+                    <option value="abyss">Abyss</option>
+                    <option value="fracture">Fracture</option>
+                    <option value="split">Split</option>
+                    <option value="lotus">Lotus</option>
+                    <option value="bind">Bind</option>
+                </select>
+                <div class="map-image"></div>
+                <!-- <p class="pick-label">Selected</p> -->
+            </div>
+            <div class="column ban" data-team="">
+                <p class="column-title">BAN</p>
+                <select class="map-select">
+                    <option value="">Select Map</option>
+                    <option value="haven">Haven</option>
+                    <option value="pearl">Pearl</option>
+                    <option value="abyss">Abyss</option>
+                    <option value="fracture">Fracture</option>
+                    <option value="split">Split</option>
+                    <option value="lotus">Lotus</option>
+                    <option value="bind">Bind</option>
+                </select>
+                <div class="map-image"></div>
+                <!-- <p class="pick-label">Selected</p> -->
+            </div>
+            <div class="column ban" data-team="">
+                <p class="column-title">BAN</p>
+                <select class="map-select">
+                    <option value="">Select Map</option>
+                    <option value="haven">Haven</option>
+                    <option value="pearl">Pearl</option>
+                    <option value="abyss">Abyss</option>
+                    <option value="fracture">Fracture</option>
+                    <option value="split">Split</option>
+                    <option value="lotus">Lotus</option>
+                    <option value="bind">Bind</option>
+                </select>
+                <div class="map-image"></div>
+            </div>
+            <div class="column ban" data-team="">
+                <p class="column-title">BAN</p>
+                <select class="map-select">
+                    <option value="">Select Map</option>
+                    <option value="haven">Haven</option>
+                    <option value="pearl">Pearl</option>
+                    <option value="abyss">Abyss</option>
+                    <option value="fracture">Fracture</option>
+                    <option value="split">Split</option>
+                    <option value="lotus">Lotus</option>
+                    <option value="bind">Bind</option>
+                </select>
+                <div class="map-image"></div>
+            </div>
+            <div class="column pick" data-team="">
+                <p class="column-title">PICK</p>
+                <select class="map-select">
+                    <option value="">Select Map</option>
+                    <option value="haven">Haven</option>
+                    <option value="pearl">Pearl</option>
+                    <option value="abyss">Abyss</option>
+                    <option value="fracture">Fracture</option>
+                    <option value="split">Split</option>
+                    <option value="lotus">Lotus</option>
+                    <option value="bind">Bind</option>
+                </select>
+                <div class="map-image"></div>
+                <p class="pick-label">Selected</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
