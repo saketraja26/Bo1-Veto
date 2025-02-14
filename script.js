@@ -10,7 +10,21 @@ document.getElementById("tossButton").addEventListener("click", function () {
     }
 
     const winner = teams[Math.floor(Math.random() * teams.length)];
-    document.getElementById("tossResult").textContent = winner + " wins the toss!";
+    const loser = teams.find(team => team !== winner); // Get the other team as loser
+
+    document.getElementById("tossResult").textContent = `${winner} wins the toss!`;
+
+    // Show side selection
+    document.querySelector(".side-selection-column").style.display = "block";
+    document.getElementById("loserText").textContent = `${winner}, choose Attack or Defense:`;
+
+    document.getElementById("chooseAttack").onclick = function () {
+        finalizeSides(loser, winner, "Attack");
+    };
+
+    document.getElementById("chooseDefense").onclick = function () {
+        finalizeSides(loser, winner, "Defense");
+    };
 });
 
 // Map Selection Logic
@@ -18,7 +32,9 @@ const mapSelections = document.querySelectorAll(".map-select");
 
 function updateMapOptions() {
     // Get all selected maps
-    const selectedMaps = Array.from(mapSelections).map(select => select.value).filter(value => value);
+    const selectedMaps = Array.from(mapSelections)
+        .map(select => select.value)
+        .filter(value => value);
 
     // Update each dropdown
     mapSelections.forEach(select => {
@@ -59,3 +75,25 @@ mapSelections.forEach(select => {
         updateMapOptions(); // Update dropdown options dynamically
     });
 });
+
+function finalizeSides(loser, winner, chosenSide) {
+    const otherSide = chosenSide === "Attack" ? "Defense" : "Attack";
+
+    // Get the final picked map
+    const selectedMaps = document.querySelectorAll(".map-select");
+    let finalMap = "";
+    selectedMaps.forEach(select => {
+        if (select.value) finalMap = select.value;
+    });
+
+    if (!finalMap) {
+        alert("No map has been selected!");
+        return;
+    }
+
+    document.getElementById("finalMap").textContent = `Final Map: ${finalMap}`;
+    document.getElementById("teamSides").textContent = `${loser} - ${chosenSide}, ${winner} - ${otherSide}`;
+
+    // Show final result
+    document.querySelector(".final-map").style.display = "block";
+}
